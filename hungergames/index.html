@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hungergames - Esercitazione MAPS - Requisiti</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Esercitazione MAPS - Requisiti" class="md-header__button md-logo" aria-label="Esercitazione MAPS - Requisiti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Esercitazione MAPS - Requisiti
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hungergames
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Esercitazione MAPS - Requisiti" class="md-nav__button md-logo" aria-label="Esercitazione MAPS - Requisiti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Esercitazione MAPS - Requisiti
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<style>
+  /* =========================================================
+     CANVAS CORE — REQUISITI / UML PAGE OVERHAUL
+     Single-file version for index.md
+     ========================================================= */
+
+  :root{
+    --bg:#0b0f14;
+    --bg-2:#101722;
+    --surface:#151c26;
+    --surface-2:#1b2430;
+    --surface-3:#202b39;
+    --text:#f3f6fb;
+    --muted:#b4bfcd;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 16px 36px rgba(0,0,0,.34);
+
+    --hunger:#03a7ff;
+    --hunger-soft:rgba(3,167,255,.14);
+
+    --moon:#8b5cf6;
+    --moon-soft:rgba(139,92,246,.14);
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+  }
+
+  /* =========================================================
+     FIX WIDTH / MKDOCS CONSTRAINTS
+     ========================================================= */
+
+  .md-grid{
+    max-width:none !important;
+  }
+
+  .md-main__inner{
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  .md-content{
+    width:100% !important;
+  }
+
+  .md-typeset{
+    max-width:none !important;
+  }
+
+  .md-content__inner.md-typeset{
+    max-width:none !important;
+    margin:0 !important;
+    padding:1.2rem 2rem 3rem !important;
+  }
+
+  html,
+  body,
+  .md-container,
+  .md-main,
+  .md-main__inner,
+  .md-content{
+    background:
+      radial-gradient(circle at top, rgba(3,167,255,.06), transparent 24%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,.06), transparent 24%),
+      var(--bg) !important;
+    color:var(--text) !important;
+  }
+
+  .page-shell{
+    width:min(100%, 1720px);
+    margin:0 auto;
+    padding:0 1.25rem 2.5rem;
+  }
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+
+  body,
+  p,
+  li,
+  td,
+  th,
+  figcaption{
+    color:var(--muted) !important;
+  }
+
+  p,
+  li{
+    line-height:1.75;
+  }
+
+  strong{
+    color:var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4{
+    color:var(--text) !important;
+    letter-spacing:.2px;
+    scroll-margin-top:96px;
+    margin-top:0;
+  }
+
+  h1{
+    font-size:clamp(2.2rem, 3.8vw, 3.55rem);
+    line-height:1.05;
+    margin-bottom:1rem;
+    padding-bottom:.65rem;
+    border-bottom:2px solid rgba(3,167,255,.55);
+  }
+
+  h2{
+    font-size:clamp(1.4rem, 2vw, 1.95rem);
+    margin-bottom:.85rem;
+    padding-bottom:.35rem;
+    border-bottom:1px solid rgba(3,167,255,.25);
+  }
+
+  h3{
+    font-size:1.08rem;
+    color:var(--hunger) !important;
+  }
+
+  h4{
+    font-size:1rem;
+    margin-bottom:.4rem;
+  }
+
+  a{
+    color:var(--hunger);
+    text-decoration-thickness:1px;
+    text-underline-offset:2px;
+  }
+
+  a:hover{
+    color:#8bdcff;
+  }
+
+  hr{
+    border:0;
+    height:1px;
+    margin:2rem 0;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  }
+
+  /* =========================================================
+     TOP NAV
+     ========================================================= */
+
+  .page-nav{
+    position:sticky;
+    top:72px;
+    z-index:10;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:.65rem;
+
+    margin:0 0 1.35rem;
+    padding:.8rem;
+
+    background:rgba(17,23,34,.76);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(10px);
+  }
+
+  .page-nav a{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem;
+
+    padding:.62rem .95rem;
+    border-radius:999px;
+
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    border:1px solid rgba(255,255,255,.07);
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+    font-size:.92rem;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+
+  .page-nav a:hover{
+    transform:translateY(-1px);
+    border-color:rgba(3,167,255,.36);
+    box-shadow:0 10px 24px rgba(3,167,255,.10);
+  }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+
+  .hero{
+    display:grid;
+    grid-template-columns:1.55fr 1fr;
+    gap:1rem;
+    align-items:stretch;
+
+    margin:0 0 1.6rem;
+  }
+
+  .hero-copy,
+  .hero-panel{
+    background:linear-gradient(180deg, rgba(21,28,38,.95), rgba(27,36,48,.95));
+    border:1px solid var(--border);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+  }
+
+  .hero-copy{
+    padding:1.7rem 1.7rem 1.55rem;
+  }
+
+  .hero-panel{
+    padding:1rem;
+    display:grid;
+    gap:.85rem;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    margin:0 0 .55rem;
+
+    color:var(--hunger);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+  }
+
+  .hero-copy p{
+    max-width:80ch;
+    margin-bottom:0;
+  }
+
+  .tone-card{
+    padding:1rem 1rem .95rem;
+    border-radius:18px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+  }
+
+  .tone-card h3{
+    margin:0 0 .35rem;
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+  }
+
+  .tone-card p{
+    margin:0;
+    font-size:.95rem;
+  }
+
+  .tone-hunger h3{ color:var(--hunger) !important; }
+  .tone-moon h3{ color:var(--moon) !important; }
+
+  .tone-hunger{
+    background:
+      linear-gradient(180deg, rgba(3,167,255,.08), transparent 30%),
+      linear-gradient(180deg, var(--surface), var(--surface-2));
+    border-color:rgba(3,167,255,.22);
+  }
+
+  .tone-moon{
+    background:
+      linear-gradient(180deg, rgba(139,92,246,.08), transparent 30%),
+      linear-gradient(180deg, var(--surface), var(--surface-2));
+    border-color:rgba(139,92,246,.22);
+  }
+
+  /* =========================================================
+     SECTIONS / CARDS
+     ========================================================= */
+
+  .section{
+    margin-top:1.8rem;
+    padding:1.35rem 0 0;
+  }
+
+  .section > p{
+    max-width:88ch;
+  }
+
+  .card{
+    padding:1.15rem 1.15rem 1rem;
+    border-radius:22px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow:var(--shadow);
+  }
+
+  .card p:last-child,
+  .card ul:last-child{
+    margin-bottom:0;
+  }
+
+  .intro-quote{
+    margin:1rem 0 0;
+    padding:1rem 1.15rem;
+
+    background:linear-gradient(180deg, var(--surface), var(--surface-2)) !important;
+    border-left:4px solid var(--hunger) !important;
+    border-radius:0 16px 16px 0;
+    box-shadow:var(--shadow);
+  }
+
+  .intro-quote p,
+  .intro-quote li{
+    color:var(--text) !important;
+  }
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+
+  .accent-cyan{
+    border-color:rgba(3,167,255,.22);
+  }
+
+  .accent-purple{
+    border-color:rgba(139,92,246,.22);
+  }
+
+  .accent-cyan h3,
+  .accent-cyan h4{
+    color:var(--hunger) !important;
+  }
+
+  .accent-purple h3,
+  .accent-purple h4{
+    color:var(--moon) !important;
+  }
+
+  .mini-label{
+    display:inline-flex;
+    width:fit-content;
+    margin:0 0 .75rem;
+    padding:.35rem .65rem;
+    border-radius:999px;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    background:rgba(255,255,255,.04);
+    color:var(--muted);
+  }
+
+  .example-box{
+    margin-top:.9rem;
+    padding:.9rem 1rem;
+    border-radius:16px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.03);
+  }
+
+  .example-box strong{
+    color:var(--text);
+  }
+
+  /* =========================================================
+     DIAGRAM CARDS
+     ========================================================= */
+
+  .diagram-card{
+    margin-top:1rem;
+    padding:1.15rem;
+    border-radius:24px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(21,28,38,.96), rgba(27,36,48,.96));
+    box-shadow:var(--shadow);
+  }
+
+  .diagram-title{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:.9rem;
+  }
+
+  .diagram-title p{
+    margin:0;
+    max-width:84ch;
+  }
+
+  .diagram-frame{
+    padding:1rem;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#0f141d;
+    overflow:auto;
+  }
+
+  .mermaid{
+    background:#0f141d !important;
+    padding:0 !important;
+    border-radius:14px;
+  }
+
+  .diagram-explainer{
+    margin-top:1rem;
+    padding:1rem 1rem .95rem;
+    border-radius:18px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.03);
+  }
+
+  .diagram-explainer p:last-child{
+    margin-bottom:0;
+  }
+
+  /* =========================================================
+     LISTS
+     ========================================================= */
+
+  ul{
+    padding-left:1.2rem;
+  }
+
+  li{
+    margin-bottom:.45rem;
+  }
+
+  /* =========================================================
+     CODE
+     ========================================================= */
+
+  code,
+  pre,
+  .highlight{
+    background-color:#0f141d !important;
+    color:#dbe7f5 !important;
+    border:1px solid var(--border);
+    border-radius:12px;
+  }
+
+  code{
+    padding:.15rem .35rem;
+  }
+
+  pre{
+    padding:1rem;
+    overflow-x:auto;
+    box-shadow:var(--shadow);
+  }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+
+  @media (max-width: 1180px){
+    .hero{
+      grid-template-columns:1fr;
+    }
+
+    .grid-2,
+    .grid-3{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media (max-width: 768px){
+    .md-content__inner.md-typeset{
+      padding:1rem 1rem 2rem !important;
+    }
+
+    .page-shell{
+      padding:0 .5rem 1.7rem;
+    }
+
+    .hero-copy,
+    .hero-panel{
+      border-radius:20px;
+    }
+
+    .hero-copy{
+      padding:1.25rem;
+    }
+
+    .page-nav{
+      position:relative;
+      top:auto;
+    }
+
+    .diagram-card,
+    .card{
+      padding:.95rem;
+      border-radius:18px;
+    }
+
+    .diagram-frame{
+      padding:.7rem;
+    }
+  }
+</style>
+
+<div class="page-shell">
+
+  <nav class="page-nav" aria-label="Sezioni della pagina">
+    <a href="#requisiti-utente">Requisiti Utente</a>
+    <a href="#requisiti-funzionali">Requisiti Funzionali</a>
+    <a href="#requisiti-non-funzionali">Requisiti Non Funzionali</a>
+    <a href="#diagrammi-uml">Diagrammi UML</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><a href="https://docs.google.com/document/d/1vD1ZlI0qUt_C8mxEFn4kZzjDT62iEKx3/edit?usp=sharing&ouid=115865250741521930822&rtpof=true&sd=true">Hunger Games: Cornucopia</p>
+      <h1>Requisiti e Diagrammi UML</h1>
+      <p>
+        Questa sezione raccoglie i requisiti del progetto e la relativa modellazione UML, organizzando i contenuti in modo più chiaro, leggibile e coerente con il resto della documentazione.
+      </p>
+    </div>
+
+    <aside class="hero-panel" aria-label="Panoramica del contenuto">
+      <div class="tone-card tone-hunger">
+        <h3>Struttura</h3>
+        <p>Requisiti, diagrammi e spiegazioni sono separati in blocchi ordinati e facili da leggere.</p>
+      </div>
+    </aside>
+  </header>
+
+  <section id="requisiti-utente" class="section">
+    <h2>Requisiti Utente</h2>
+
+    <div class="card accent-cyan">
+      <p>
+        L’utente del sistema è un giocatore che cerca un’esperienza narrativa e di sopravvivenza, ambientata in un mondo ostile ispirato a Hunger Games. Il giocatore deve poter vivere una storia originale, esplorare ambienti diversi, affrontare situazioni di pericolo e progredire attraverso eventi principali e aree sbloccabili.
+      </p>
+
+      <p>In particolare, il giocatore deve poter:</p>
+      <ul>
+        <li>esplorare un mondo semi-open world composto da distretti, hub, wilderness e arene;</li>
+        <li>vivere una storia progressiva e coerente;</li>
+        <li>affrontare situazioni di tensione sia con il combattimento sia con la furtività;</li>
+        <li>raccogliere risorse e usarle per migliorare il proprio equipaggiamento;</li>
+        <li>interagire con personaggi e dialoghi;</li>
+        <li>cambiare personaggio in momenti specifici della storia, seguendo la progressione narrativa.</li>
+      </ul>
+
+      <p>
+        L’esperienza deve trasmettere costantemente la sensazione di essere in un contesto pericoloso, dove ogni area esplorata e ogni evento affrontato può cambiare il modo in cui il giocatore avanza.
+      </p>
+    </div>
+  </section>
+
+  <section id="requisiti-funzionali" class="section">
+    <h2>Requisiti Funzionali</h2>
+
+    <p>
+      I requisiti funzionali definiscono ciò che il sistema deve fare, quindi le funzioni concrete che supportano il gameplay.
+    </p>
+
+    <div class="grid-2">
+      <article class="card accent-cyan">
+        <span class="mini-label">Esplorazione e movimento</span>
+        <h3>🧭 Esplorazione e movimento</h3>
+        <p>Il sistema deve permettere al giocatore di:</p>
+        <ul>
+          <li>muoversi liberamente negli ambienti;</li>
+          <li>arrampicarsi e utilizzare il traversal verticale;</li>
+          <li>attraversare aree collegate tra loro;</li>
+          <li>sfruttare il movimento anche come strumento strategico.</li>
+        </ul>
+        <div class="example-box">
+          <strong>Esempio:</strong> il giocatore può salire su una struttura sopraelevata per osservare un’area dell’arena prima di scendere o aggirare un nemico.
+        </div>
+      </article>
+
+      <article class="card accent-cyan">
+        <span class="mini-label">Combattimento</span>
+        <h3>⚔️ Sistema di combattimento</h3>
+        <p>Il sistema deve supportare un combattimento realistico e tattico, basato su:</p>
+        <ul>
+          <li>armi da mischia;</li>
+          <li>armi a distanza;</li>
+          <li>armi da fuoco, utilizzate raramente e con forte valore strategico.</li>
+        </ul>
+        <div class="example-box">
+          <strong>Esempio:</strong> durante una fase nell’arena, il giocatore può usare un arco per colpire da lontano, oppure una pistola trovata in un supply drop come risorsa limitata e ad alto rischio.
+        </div>
+      </article>
+
+      <article class="card accent-cyan">
+        <span class="mini-label">Stealth</span>
+        <h3>👤 Sistema stealth</h3>
+        <p>Il sistema deve permettere al giocatore di:</p>
+        <ul>
+          <li>nascondersi in coperture, vegetazione e ombre;</li>
+          <li>evitare il rilevamento da parte dei nemici;</li>
+          <li>usare distrazioni e suoni per manipolare le situazioni.</li>
+        </ul>
+        <div class="example-box">
+          <strong>Esempio:</strong> in una zona forestale o in una wilderness, il giocatore può attraversare un tratto di erba alta per non essere visto da un altro tributo.
+        </div>
+      </article>
+
+      <article class="card accent-cyan">
+        <span class="mini-label">Arene</span>
+        <h3>🏟️ Sistema arene</h3>
+        <p>Il sistema deve gestire le arene come eventi principali della progressione, in cui il giocatore affronta situazioni di sopravvivenza e combattimento.</p>
+        <ul>
+          <li>essere sbloccate in base alla progressione della storia;</li>
+          <li>avere caratteristiche diverse in base al distretto o alla fase narrativa;</li>
+          <li>contenere risorse, pericoli e condizioni di pressione;</li>
+          <li>favorire sia lo scontro diretto sia approcci stealth o strategici.</li>
+        </ul>
+        <div class="example-box">
+          <strong>Esempio:</strong> un’arena forestale può premiare l’occultamento e l’uso dell’ambiente, mentre un’arena più aperta o tecnica può spingere verso scontri rapidi e gestione delle risorse.
+        </div>
+      </article>
+
+      <article class="card accent-cyan">
+        <span class="mini-label">Progressione</span>
+        <h3>📈 Sistema di progressione</h3>
+        <ul>
+          <li>sbloccare nuove regioni e distretti;</li>
+          <li>attivare eventi principali;</li>
+          <li>legare la progressione alle tappe narrative;</li>
+          <li>gestire lo sviluppo dei personaggi giocabili.</li>
+        </ul>
+      </article>
+
+      <article class="card accent-cyan">
+        <span class="mini-label">Risorse e crafting</span>
+        <h3>🎒 Sistema di risorse e crafting</h3>
+        <p>Il sistema deve consentire:</p>
+        <ul>
+          <li>raccolta di materiali nelle wilderness, nei distretti e nei supply drop;</li>
+          <li>gestione dell’inventario;</li>
+          <li>creazione e miglioramento di strumenti e armi.</li>
+        </ul>
+        <div class="example-box">
+          <strong>Esempio:</strong> il giocatore può raccogliere materiali in una zona esplorabile e usarli più avanti per creare frecce, curativi o migliorare un’arma.
+        </div>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Narrazione</span>
+        <h3>💬 Sistema narrativo e dialoghi</h3>
+        <p>Il sistema deve permettere:</p>
+        <ul>
+          <li>interazioni con NPC;</li>
+          <li>dialoghi a scelta;</li>
+          <li>piccoli effetti sulle relazioni e sulle informazioni ottenute.</li>
+        </ul>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Cambio personaggio</span>
+        <h3>🔄 Sistema di cambio personaggio</h3>
+        <p>Il sistema deve consentire lo switch tra più personaggi giocabili in momenti specifici della storia.</p>
+        <div class="example-box">
+          <strong>Esempio:</strong> un personaggio principale può guidare la progressione generale, mentre un personaggio secondario può essere usato in un segmento più stealth o più tattico, utile per mostrare una diversa prospettiva del mondo.
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="requisiti-non-funzionali" class="section">
+    <h2>Requisiti Non Funzionali</h2>
+
+    <div class="grid-3">
+      <article class="card accent-cyan">
+        <h3>Prestazioni</h3>
+        <p>Il gioco deve mantenere fluidità durante: esplorazione, combattimento, attraversamento di aree complesse e gestione di eventi di arena.</p>
+      </article>
+
+      <article class="card accent-cyan">
+        <h3>Immersione</h3>
+        <p>L’esperienza deve restare coerente con il tono del progetto, quindi: realistica, tesa, credibile e atmosferica.</p>
+      </article>
+
+      <article class="card accent-cyan">
+        <h3>Usabilità</h3>
+        <p>Controlli intuitivi, interfaccia leggibile e informazioni chiare senza rompere l’immersione.</p>
+      </article>
+
+      <article class="card accent-purple">
+        <h3>Affidabilità</h3>
+        <p>Il gioco non deve bloccarsi durante il passaggio tra aree o eventi; i salvataggi devono essere stabili e coerenti.</p>
+      </article>
+
+      <article class="card accent-purple">
+        <h3>Coerenza sistemica</h3>
+        <p>Arene, esplorazione, furtività, combattimento e progressione devono funzionare come un unico sistema, non come feature isolate.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="diagrammi-uml" class="section">
+    <h2>Diagrammi UML</h2>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Diagramma di sequenza per esplorazione e raccolta risorse</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Game as Game Client
+    participant World as World Manager
+    participant Loot as Resource System
+    participant Craft as Crafting System
+    participant UI as UI/HUD
+
+    Player->>Game: Esplora area
+    Game->>World: Aggiorna posizione del giocatore
+    World->>UI: Mostra contesto dell'area
+
+    Player->>Game: Interagisce con oggetto ambientale
+    Game->>Loot: Verifica risorsa disponibile
+    Loot->>Game: Restituisce materiali raccolti
+    Game->>UI: Mostra conferma raccolta
+
+    Player->>Game: Decide se conservare o usare materiali
+    Game->>Craft: Invia materiali disponibili
+    Craft->>Game: Restituisce oggetti craftabili
+    Game->>UI: Mostra opzioni crafting
+
+    Player->>Game: Seleziona crafting
+    Game->>Craft: Crea oggetto o migliora equipaggiamento
+    Craft->>UI: Aggiorna inventario e stato oggetti
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma mostra il flusso legato all’esplorazione del mondo. Il giocatore si muove in un’area, il sistema aggiorna la posizione e il contesto ambientale, e quando il personaggio interagisce con oggetti o punti di raccolta, il sistema registra i materiali ottenuti. Le risorse vengono poi rese disponibili per il crafting o per il miglioramento dell’equipaggiamento.
+        </p>
+        <p>
+          Questo flusso è importante perché collega direttamente l’esplorazione con la sopravvivenza. Non si tratta solo di girare liberamente nel mondo, ma di raccogliere ciò che serve per progredire e prepararsi agli eventi successivi.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Diagramma di sequenza per sistema combattimento</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Game as Game Client
+    participant Arena as Arena Manager
+    participant Combat as Combat Manager
+    participant Enemy as Enemy AI
+    participant UI as UI/HUD
+    participant Progress as Progression System
+
+    Player->>Game: Entra in zona arena
+    Game->>Arena: Attiva evento arena
+    Arena->>Combat: Inizializza combattimento
+    Combat->>UI: Mostra HUD di combattimento
+    Combat->>Enemy: Attiva comportamento ostile
+
+    loop Turno di gioco / scontro attivo
+    Player->>Game: Sceglie azione
+    Game->>Combat: Esegue attacco, difesa o utilizzo arma
+    Combat->>Enemy: Applica danno o effetto
+    Enemy->>Combat: Risposta IA o contrattacco
+    Combat->>UI: Aggiorna salute, stato e feedback visivo
+    end
+
+    Combat->>Progress: Registra vittoria o sconfitta
+    Progress->>UI: Mostra ricompensa o esito negativo
+    Progress->>Arena: Chiude evento arena
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma descrive cosa succede quando il giocatore entra in un evento arena. Il sistema attiva il combattimento, prepara l’HUD dedicato e avvia la logica dello scontro. Durante il combattimento il giocatore sceglie le proprie azioni, mentre il sistema gestisce danni, risposte dell’avversario, stato della salute e feedback visivi.
+        </p>
+        <p>
+          Qui l’arena non è solo un luogo, ma un vero sistema di pressione e rischio. È il punto in cui confluiscono sopravvivenza, tattica, gestione delle risorse e uso delle armi, comprese quelle rare da fuoco, che restano una risorsa limitata e non il centro del gameplay.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Diagramma di sequenza per sistema stealth</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Game as Game Client
+    participant Stealth as Stealth System
+    participant Enemy as Enemy AI
+    participant UI as UI/HUD
+
+    Player->>Game: Entra in area pericolosa
+    Game->>Stealth: Attiva rilevamento furtivo
+    Stealth->>UI: Mostra indicatore visibilità
+
+    Player->>Game: Si muove in copertura / erba alta / ombra
+    Game->>Stealth: Aggiorna livello rumore e visibilità
+    Stealth->>Enemy: Verifica se il giocatore è rilevabile
+
+    alt Il giocatore resta nascosto
+        Stealth->>UI: Mantiene stato invisibile
+        Enemy->>Stealth: Nessuna reazione
+    else Il giocatore viene individuato
+        Stealth->>Enemy: Attiva allerta
+        Enemy->>Game: Avvia ricerca o inseguimento
+        Stealth->>UI: Segnala pericolo
+    end
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma mostra il funzionamento della furtività. Il giocatore entra in un’area pericolosa e il sistema valuta la visibilità, la copertura e il rumore prodotto dai movimenti. Se il personaggio resta nascosto, il nemico non reagisce; se invece viene rilevato, il sistema cambia lo stato dell’IA e segnala il pericolo.
+        </p>
+        <p>
+          Questo flusso è coerente con il tipo di esperienza che il gioco vuole offrire, perché la furtività è una vera strategia di sopravvivenza e non un elemento secondario.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Diagramma di sequenza per il sistema di dialogo e cambio personaggio</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Game as Game Client
+    participant Story as Narrative System
+    participant Char as Character Manager
+    participant NPC as NPC / Dialogue Node
+    participant UI as UI/HUD
+
+    Player->>Game: Interagisce con NPC o trigger narrativo
+    Game->>Story: Avvia dialogo o cutscene
+    Story->>UI: Mostra opzioni di dialogo
+
+    Player->>Game: Seleziona risposta
+    Game->>Story: Registra scelta
+    Story->>NPC: Aggiorna reazione o informazioni disponibili
+
+    alt La storia richiede cambio personaggio
+        Story->>Char: Richiede switch personaggio
+        Char->>UI: Aggiorna personaggio attivo
+        Char->>Game: Modifica controlli e contesto
+    else Nessun cambio personaggio
+        Story->>UI: Continua scena con personaggio attuale
+    end
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma descrive la parte narrativa e il sistema di switch tra personaggi. Quando il giocatore interagisce con un NPC o attiva un evento narrativo, il sistema apre il dialogo e mostra le opzioni disponibili. In alcuni momenti la storia può richiedere il passaggio a un altro personaggio, e il sistema aggiorna il personaggio attivo, i controlli e il contesto della scena.
+        </p>
+        <p>
+          Questo è uno dei punti più importanti del progetto, perché il cambio personaggio non è un effetto casuale ma una scelta narrativa e di gameplay legata alla progressione della storia.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Sistema di progresso, sblocco aree e avanzamento tra distretti</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Story as Narrative System
+    participant Progress as Progression System
+    participant World as World Manager
+    participant UI as UI/HUD
+
+    Player->>Story: Completa evento principale
+    Story->>Progress: Registra obiettivo completato
+    Progress->>World: Sblocca nuova area o distretto
+    World->>UI: Aggiorna mappa e accessibilità
+    Progress->>UI: Mostra avanzamento ottenuto
+
+    Player->>World: Entra nella nuova regione
+    World->>Story: Attiva nuovo blocco narrativo
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma mostra come il gioco avanza nel tempo. Quando il giocatore completa un evento principale, il sistema aggiorna la progressione e sblocca nuove regioni, nuovi distretti o nuove aree della mappa. La storia quindi non serve solo a raccontare eventi, ma anche a far evolvere il mondo di gioco.
+        </p>
+        <p>
+          Questo rende la progressione coerente con la struttura semi-open world: l’accesso alle aree non è completamente libero dall’inizio, ma cresce insieme alla narrazione.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Sistema di crafting e upgrade</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+    actor Player
+    participant Game as Game Client
+    participant Inventory as Inventory System
+    participant Craft as Crafting System
+    participant UI as UI/HUD
+
+    Player->>Game: Apre inventario o banco di crafting
+    Game->>Inventory: Controlla materiali disponibili
+    Inventory->>Craft: Invia elenco risorse
+
+    Craft->>UI: Mostra oggetti craftabili o migliorabili
+    Player->>Game: Seleziona craft o upgrade
+    Game->>Craft: Esegue creazione o potenziamento
+    Craft->>Inventory: Aggiorna materiali e oggetti
+    Craft->>UI: Aggiorna equipaggiamento e risultati
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma rappresenta la parte di preparazione e miglioramento. Il giocatore apre l’inventario o un punto di crafting, il sistema verifica i materiali disponibili e mostra gli oggetti che si possono creare o migliorare. Dopo la scelta, il sistema aggiorna inventario, risorse e stato dell’equipaggiamento.
+        </p>
+        <p>
+          Questo flusso è fondamentale perché collega la raccolta risorse alla sopravvivenza concreta. Le risorse non servono solo a riempire l’inventario, ma a prendere decisioni utili e strategiche.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <div>
+          <h3>Diagramma caso d’uso gioco completo</h3>
+        </div>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+flowchart LR
+    G([Giocatore])
+    NPC([NPC])
+
+    subgraph SYS["The Hunger Games: Cornucopia"]
+    direction LR
+
+    subgraph ES["Esplorazione e Sopravvivenza"]
+    direction TB
+    U1((Esplorare il mondo))
+    U2((Raccogliere risorse))
+    U3((Gestire inventario))
+    U4((Crafting e upgrade))
+    U5((Salvare / Caricare partita))
+    end
+
+    subgraph CA["Combattimento e Arene"]
+    direction TB
+    U6((Affrontare eventi arena))
+    U7((Combattere))
+    U8((Usare furtività))
+    U9((Armi da mischia))
+    U10((Armi a distanza))
+    U11((Armi da fuoco rare))
+    end
+
+    subgraph NA["Narrazione e Progressione"]
+    direction TB
+    U12((Interagire con NPC))
+    U13((Gestire dialoghi))
+    U14((Progredire nella storia))
+    U15((Cambiare personaggio))
+    U16((Sbloccare nuove aree))
+    end
+    end
+
+    G --> U1
+    G --> U2
+    G --> U4
+    G --> U5
+    G --> U6
+    G --> U12
+    G --> U14
+    G --> U15
+
+    NPC --> U12
+
+    U2 -.->|include| U3
+    U4 -.->|include| U3
+
+    U6 -.->|include| U7
+    U6 -.->|include| U8
+    U7 -.->|include| U9
+    U7 -.->|include| U10
+    U11 -.->|extend| U7
+
+    U12 -.->|include| U13
+    U14 -.->|include| U16
+    U15 -.->|extend| U14
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma riassume l’intero gioco come insieme di sistemi connessi: esplorazione, combattimento, furtività, narrazione, progressione e crafting. La struttura mostra come il giocatore possa interagire con il mondo in modi diversi, mantenendo sempre una relazione coerente tra obiettivi, aree sbloccabili e contenuti narrativi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

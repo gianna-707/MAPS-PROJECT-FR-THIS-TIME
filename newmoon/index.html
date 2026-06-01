@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Newmoon - Esercitazione MAPS - Requisiti</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Esercitazione MAPS - Requisiti" class="md-header__button md-logo" aria-label="Esercitazione MAPS - Requisiti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Esercitazione MAPS - Requisiti
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Newmoon
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Esercitazione MAPS - Requisiti" class="md-nav__button md-logo" aria-label="Esercitazione MAPS - Requisiti" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Esercitazione MAPS - Requisiti
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<style>
+  /* =========================================================
+     CANVAS CORE — NEW MOON / REQUISITI OVERHAUL
+     Single-file version for index.md
+     ========================================================= */
+
+  :root{
+    --bg:#0b0f14;
+    --bg-2:#101722;
+    --surface:#151c26;
+    --surface-2:#1b2430;
+    --surface-3:#202b39;
+    --text:#f3f6fb;
+    --muted:#b4bfcd;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 16px 36px rgba(0,0,0,.34);
+
+    --hunger:#03a7ff;
+    --hunger-soft:rgba(3,167,255,.14);
+
+    --moon:#8b5cf6;
+    --moon-soft:rgba(139,92,246,.14);
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+  }
+
+  /* =========================================================
+     FIX MKDOCS WIDTH
+     ========================================================= */
+
+  .md-grid{
+    max-width:none !important;
+  }
+
+  .md-main__inner{
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  .md-content{
+    width:100% !important;
+  }
+
+  .md-typeset{
+    max-width:none !important;
+  }
+
+  .md-content__inner.md-typeset{
+    max-width:none !important;
+    margin:0 !important;
+    padding:1.2rem 2rem 3rem !important;
+  }
+
+  html,
+  body,
+  .md-container,
+  .md-main,
+  .md-main__inner,
+  .md-content{
+    background:
+      radial-gradient(circle at top, rgba(3,167,255,.06), transparent 24%),
+      radial-gradient(circle at bottom right, rgba(139,92,246,.06), transparent 24%),
+      var(--bg) !important;
+    color:var(--text) !important;
+  }
+
+  .page-shell{
+    width:min(100%, 1720px);
+    margin:0 auto;
+    padding:0 1.25rem 2.5rem;
+  }
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+
+  body,
+  p,
+  li,
+  td,
+  th,
+  figcaption{
+    color:var(--muted) !important;
+  }
+
+  p,
+  li{
+    line-height:1.75;
+  }
+
+  strong{
+    color:var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4{
+    color:var(--text) !important;
+    letter-spacing:.2px;
+    scroll-margin-top:96px;
+    margin-top:0;
+  }
+
+  h1{
+    font-size:clamp(2.2rem, 3.8vw, 3.55rem);
+    line-height:1.05;
+    margin-bottom:1rem;
+    padding-bottom:.65rem;
+    border-bottom:2px solid rgba(3,167,255,.55);
+  }
+
+  h2{
+    font-size:clamp(1.4rem, 2vw, 1.95rem);
+    margin-bottom:.85rem;
+    padding-bottom:.35rem;
+    border-bottom:1px solid rgba(3,167,255,.25);
+  }
+
+  h3{
+    font-size:1.08rem;
+    color:var(--hunger) !important;
+  }
+
+  h4{
+    font-size:1rem;
+    margin-bottom:.4rem;
+  }
+
+  a{
+    color:var(--hunger);
+    text-decoration-thickness:1px;
+    text-underline-offset:2px;
+  }
+
+  a:hover{
+    color:#8bdcff;
+  }
+
+  hr{
+    border:0;
+    height:1px;
+    margin:2rem 0;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  }
+
+  /* =========================================================
+     TOP NAV
+     ========================================================= */
+
+  .page-nav{
+    position:sticky;
+    top:72px;
+    z-index:10;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:.65rem;
+
+    margin:0 0 1.35rem;
+    padding:.8rem;
+
+    background:rgba(17,23,34,.76);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(10px);
+  }
+
+  .page-nav a{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem;
+
+    padding:.62rem .95rem;
+    border-radius:999px;
+
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    border:1px solid rgba(255,255,255,.07);
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+    font-size:.92rem;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+
+  .page-nav a:hover{
+    transform:translateY(-1px);
+    border-color:rgba(3,167,255,.36);
+    box-shadow:0 10px 24px rgba(3,167,255,.10);
+  }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+
+  .hero{
+    display:grid;
+    grid-template-columns:1.55fr 1fr;
+    gap:1rem;
+    align-items:stretch;
+
+    margin:0 0 1.6rem;
+  }
+
+  .hero-copy,
+  .hero-panel{
+    background:linear-gradient(180deg, rgba(21,28,38,.95), rgba(27,36,48,.95));
+    border:1px solid var(--border);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+  }
+
+  .hero-copy{
+    padding:1.7rem 1.7rem 1.55rem;
+  }
+
+  .hero-panel{
+    padding:1rem;
+    display:grid;
+    gap:.85rem;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    margin:0 0 .55rem;
+
+    color:var(--hunger);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+  }
+
+  .hero-copy p{
+    max-width:80ch;
+    margin-bottom:0;
+  }
+
+  .tone-card{
+    padding:1rem 1rem .95rem;
+    border-radius:18px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+  }
+
+  .tone-card h3{
+    margin:0 0 .35rem;
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+  }
+
+  .tone-card p{
+    margin:0;
+    font-size:.95rem;
+  }
+
+  .tone-hunger h3{ color:var(--hunger) !important; }
+  .tone-moon h3{ color:var(--moon) !important; }
+
+  .tone-hunger{
+    background:
+      linear-gradient(180deg, rgba(3,167,255,.08), transparent 30%),
+      linear-gradient(180deg, var(--surface), var(--surface-2));
+    border-color:rgba(3,167,255,.22);
+  }
+
+  .tone-moon{
+    background:
+      linear-gradient(180deg, rgba(139,92,246,.08), transparent 30%),
+      linear-gradient(180deg, var(--surface), var(--surface-2));
+    border-color:rgba(139,92,246,.22);
+  }
+
+  /* =========================================================
+     SECTIONS / CARDS
+     ========================================================= */
+
+  .section{
+    margin-top:1.8rem;
+    padding:1.35rem 0 0;
+  }
+
+  .section > p{
+    max-width:88ch;
+  }
+
+  .card{
+    padding:1.15rem 1.15rem 1rem;
+    border-radius:22px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow:var(--shadow);
+  }
+
+  .card p:last-child,
+  .card ul:last-child{
+    margin-bottom:0;
+  }
+
+  .intro-quote{
+    margin:1rem 0 0;
+    padding:1rem 1.15rem;
+
+    background:linear-gradient(180deg, var(--surface), var(--surface-2)) !important;
+    border-left:4px solid var(--hunger) !important;
+    border-radius:0 16px 16px 0;
+    box-shadow:var(--shadow);
+  }
+
+  .intro-quote p,
+  .intro-quote li{
+    color:var(--text) !important;
+  }
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+
+  .accent-cyan{
+    border-color:rgba(3,167,255,.22);
+  }
+
+  .accent-purple{
+    border-color:rgba(139,92,246,.22);
+  }
+
+  .accent-cyan h3,
+  .accent-cyan h4{
+    color:var(--hunger) !important;
+  }
+
+  .accent-purple h3,
+  .accent-purple h4{
+    color:var(--moon) !important;
+  }
+
+  .mini-label{
+    display:inline-flex;
+    width:fit-content;
+    margin:0 0 .75rem;
+    padding:.35rem .65rem;
+    border-radius:999px;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    background:rgba(255,255,255,.04);
+    color:var(--muted);
+  }
+
+  .example-box{
+    margin-top:.9rem;
+    padding:.9rem 1rem;
+    border-radius:16px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.03);
+  }
+
+  .example-box strong{
+    color:var(--text);
+  }
+
+  /* =========================================================
+     MEDIA CARDS
+     ========================================================= */
+
+  .media-card{
+    margin-top:1rem;
+    padding:1rem;
+    border-radius:22px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow:var(--shadow);
+  }
+
+  .media-card img{
+    display:block;
+    width:100%;
+    max-width:none;
+    height:auto;
+    aspect-ratio:16 / 10;
+    object-fit:cover;
+    border-radius:18px;
+    border:1px solid var(--border);
+  }
+
+  .media-card.cyan{
+    border-color:rgba(3,167,255,.22);
+  }
+
+  .media-card.purple{
+    border-color:rgba(139,92,246,.22);
+  }
+
+  .media-card.cyan img{
+    border-color:rgba(3,167,255,.28);
+  }
+
+  .media-card.purple img{
+    border-color:rgba(139,92,246,.28);
+  }
+
+  .media-caption{
+    margin-top:.85rem;
+    color:var(--muted);
+    font-size:.95rem;
+    line-height:1.65;
+  }
+
+  /* =========================================================
+     DIAGRAM CARDS
+     ========================================================= */
+
+  .diagram-card{
+    margin-top:1rem;
+    padding:1.15rem;
+    border-radius:24px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(21,28,38,.96), rgba(27,36,48,.96));
+    box-shadow:var(--shadow);
+  }
+
+  .diagram-title{
+    margin-bottom:.9rem;
+  }
+
+  .diagram-frame{
+    padding:1rem;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#0f141d;
+    overflow:auto;
+  }
+
+  .mermaid{
+    background:#0f141d !important;
+    padding:0 !important;
+    border-radius:14px;
+  }
+
+  .diagram-explainer{
+    margin-top:1rem;
+    padding:1rem 1rem .95rem;
+    border-radius:18px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.03);
+  }
+
+  .diagram-explainer p:last-child{
+    margin-bottom:0;
+  }
+
+  /* =========================================================
+     LISTS
+     ========================================================= */
+
+  ul{
+    padding-left:1.2rem;
+  }
+
+  li{
+    margin-bottom:.45rem;
+  }
+
+  /* =========================================================
+     CODE
+     ========================================================= */
+
+  code,
+  pre,
+  .highlight{
+    background-color:#0f141d !important;
+    color:#dbe7f5 !important;
+    border:1px solid var(--border);
+    border-radius:12px;
+  }
+
+  code{
+    padding:.15rem .35rem;
+  }
+
+  pre{
+    padding:1rem;
+    overflow-x:auto;
+    box-shadow:var(--shadow);
+  }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+
+  @media (max-width: 1180px){
+    .hero{
+      grid-template-columns:1fr;
+    }
+
+    .grid-2,
+    .grid-3{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media (max-width: 768px){
+    .md-content__inner.md-typeset{
+      padding:1rem 1rem 2rem !important;
+    }
+
+    .page-shell{
+      padding:0 .5rem 1.7rem;
+    }
+
+    .hero-copy,
+    .hero-panel{
+      border-radius:20px;
+    }
+
+    .hero-copy{
+      padding:1.25rem;
+    }
+
+    .page-nav{
+      position:relative;
+      top:auto;
+    }
+
+    .diagram-card,
+    .card,
+    .media-card{
+      padding:.95rem;
+      border-radius:18px;
+    }
+
+    .diagram-frame{
+      padding:.7rem;
+    }
+
+    .media-card img{
+      aspect-ratio:16 / 11;
+      min-height:240px;
+    }
+  }
+</style>
+
+<div class="page-shell">
+
+  <nav class="page-nav" aria-label="Sezioni della pagina">
+    <a href="#requisiti-utente">Requisiti Utente</a>
+    <a href="#requisiti-funzionali">Requisiti Funzionali</a>
+    <a href="#requisiti-non-funzionali">Requisiti Non Funzionali</a>
+    <a href="#diagrammi-uml">Diagrammi UML</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><a href="https://docs.google.com/document/d/12LeIXjoKhZXH_P3tuC5vKsXGusv1Sl9D5_elGVDDI0U/edit?usp=sharing">New Moon</a></p>
+      <h1>Requisiti e Diagrammi UML</h1>
+      <p>
+        Questa pagina raccoglie i requisiti del progetto e la relativa modellazione UML, organizzando i contenuti in una struttura più chiara, leggibile e coerente con lo stile della documentazione.
+      </p>
+    </div>
+
+    <aside class="hero-panel" aria-label="Panoramica del contenuto">
+      <div class="tone-card tone-hunger">
+        <h3>Struttura</h3>
+        <p>Requisiti, diagrammi e spiegazioni sono separati in blocchi ordinati e facili da leggere.</p>
+      </div>
+    </aside>
+  </header>
+
+  <section id="requisiti-utente" class="section">
+    <h2>Requisiti Utente</h2>
+
+    <div class="card accent-purple">
+      <p>
+        L’utente di sistema verrà coinvolto in un’esperienza prettamente narrativa in cui evocare emozioni e senso di scoperta sono lo scopo principale.
+      </p>
+
+      <p>Il giocatore deve poter:</p>
+      <ul>
+        <li>Navigare un mondo pieno di segreti da scoprire</li>
+        <li>Esplorare i personaggi tramite i dialoghi</li>
+        <li>Fare scelte influenti sulla trama</li>
+        <li>Trattare l’atto di raccolta dati come se fosse un puzzle</li>
+        <li>Continuare l’esperienza narrativa anche durante le battaglie (Battaglie dinamiche, aggiunta dall’altro gioco)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="requisiti-funzionali" class="section">
+    <h2>Requisiti Funzionali</h2>
+
+    <p>
+      I requisiti funzionali definiscono ciò che il sistema deve fare, quindi le funzioni concrete che supportano il gameplay.
+    </p>
+
+    <div class="grid-2">
+      <article class="card accent-purple">
+        <span class="mini-label">Esplorazione e movimento</span>
+        <h3>🧭 Esplorazione e movimento</h3>
+        <ul>
+          <li>Sistema top-down</li>
+          <li>Sistema di Memoria Ricostruibile (Lore Fragments)</li>
+          <li>Enigmi Ambientali a Doppia Funzione (Energy/Path Restoration)</li>
+          <li>Alternanza dei Protagonisti e Sinergia Ambientale</li>
+          <li>Sistema di Viaggio Galattico e Scelta del Pianeta</li>
+          <li>Pianeti dalle varie ispirazioni</li>
+        </ul>
+
+        <div class="example-box">
+          <strong>Sistema di controllo personaggi:</strong>
+          Anche se su mappa si muoveranno con le stesse direzioni date, i due personaggi interagiranno singolarmente tramite un pulsante distintivo a loro assegnato (Z e X, indicativamente). Questo sarà applicato anche alle loro azioni in combattimento.
+        </div>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Combattimento</span>
+        <h3>⚔️ Sistema di combattimento</h3>
+        <ul>
+          <li>Due personaggi in combattimento, entrambi assegnati a uno specifico pulsante</li>
+          <li>Pugno come azione base, spada aumenta l’attacco ma riduce le probabilità di colpo critico</li>
+          <li>Sistema a turni, ma passa ad azione in tempo reale dopo aver selezionato le azioni</li>
+          <li>Dilemma Etico nel Combattimento (Mercy/Defeat Mechanic)</li>
+        </ul>
+
+        <div class="media-card purple">
+          <img src="https://i.ibb.co/jZGjq8Wm/unnamed-1.png" alt="Sistema di combattimento" />
+          <div class="media-caption">
+            Sistema di combattimento: la visualizzazione è stata resa più ampia e centrale per dare maggiore impatto alla sezione.
+          </div>
+        </div>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Pianeti</span>
+        <h3>🪐 Sistema Pianeti</h3>
+        <ul>
+          <li>Diversi pianeti che si sbloccano con la progressione narrativa</li>
+          <li>Varie ispirazioni di universi sci-fi differenti</li>
+          <li>Differenziati in base ai nemici da affrontare e gli oggetti da raccogliere (Nonché i puzzle)</li>
+          <li>Vari personaggi da forti personalità che faranno pensare al giocatore quali strade prendere</li>
+        </ul>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Inventario</span>
+        <h3>🎒 Sistema di inventario</h3>
+        <p>Il sistema deve consentire:</p>
+        <ul>
+          <li>raccolta di oggetti sulla mappa</li>
+          <li>gestione dell’inventario</li>
+          <li>utilizzo degli strumenti nei puzzle ambientali</li>
+        </ul>
+
+        <div class="media-card cyan">
+          <img src="https://i.ibb.co/twHxN2w1/inv.png" alt="Inventario" />
+          <div class="media-caption">
+            Inventario: l’immagine è stata adattata a un formato più grande e cinematico, così risulta più leggibile nel layout.
+          </div>
+        </div>
+      </article>
+
+      <article class="card accent-purple">
+        <span class="mini-label">Narrazione</span>
+        <h3>💬 Sistema narrativo e dialoghi</h3>
+        <p>Il sistema deve permettere:</p>
+        <ul>
+          <li>interazioni con NPC</li>
+          <li>dialoghi a scelta multipla</li>
+          <li>Grandi effetti sulla trama generale</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="requisiti-non-funzionali" class="section">
+    <h2>Requisiti Non Funzionali</h2>
+
+    <div class="grid-2">
+      <article class="card accent-purple">
+        <h3>Immersione</h3>
+        <p>L’esperienza deve restare coerente con il tono del progetto, quindi: sci-fi, decadente, maestosa.</p>
+      </article>
+
+      <article class="card accent-purple">
+        <h3>Usabilità</h3>
+        <p>Controlli intuitivi, interfaccia estesa ma leggibile.</p>
+      </article>
+
+      <article class="card accent-purple">
+        <h3>Affidabilità</h3>
+        <p>Il gioco non deve bloccarsi durante il passaggio tra aree o eventi di dialogo e combattimento; i salvataggi devono essere stabili.</p>
+      </article>
+
+      <article class="card accent-purple">
+        <h3>Coerenza sistemica</h3>
+        <p>Il gioco avrà sezioni distinte fra esplorazione, momenti estesi di dialoghi con apparizione di immagini e cutscene e combattimenti.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="diagrammi-uml" class="section">
+    <h2>Diagrammi UML</h2>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <h3>Diagramma di sequenza per il sistema dei dialoghi</h3>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+   actor Giocatore
+   participant NPC
+   participant Dialogo
+   participant Narrativa
+
+   Giocatore->>NPC: Interagisce
+   NPC->>Dialogo: Avvia dialogo
+   Dialogo-->>Giocatore: Mostra opzioni
+   Giocatore->>Dialogo: Seleziona scelta
+   Dialogo->>Narrativa: Registra decisione
+   Narrativa-->>Dialogo: Aggiorna stato trama
+   Dialogo-->>Giocatore: Mostra conseguenze
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma mostra il flusso sequenziale delle interazioni narrative del gioco. Tutto inizia quando il giocatore interagisce fisicamente con un NPC; a quel punto il sistema dei dialoghi si attiva e propone una serie di opzioni a scelta multipla. Una volta che il giocatore ha preso la sua decisione, la scelta viene trasmessa e registrata nel motore della narrativa, il quale aggiorna lo stato della trama globale e restituisce al giocatore le conseguenze visibili del suo comportamento.
+        </p>
+        <p>
+          Questo flusso sottolinea la natura prettamente narrativa del titolo. Le scelte non sono semplici elementi di contorno, ma agiscono come veri e propri bivi in grado di deviare il corso degli eventi e modificare l'esperienza galattica del giocatore.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <h3>Diagramma di sequenza per il sistema dei puzzle ambientali</h3>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+sequenceDiagram
+   actor Giocatore
+   participant Puzzle
+   participant Inventario
+   participant Ambiente
+
+   Giocatore->>Puzzle: Interagisce
+   Puzzle->>Inventario: Verifica strumento richiesto
+   Inventario-->>Puzzle: Strumento disponibile
+   Giocatore->>Puzzle: Utilizza strumento
+   Puzzle->>Ambiente: Ripristina energia/percorso
+   Ambiente-->>Giocatore: Nuova area accessibile
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma descrive la logica dietro la risoluzione degli enigmi nel mondo di gioco. Quando il giocatore interagisce con un puzzle, il sistema interroga immediatamente l’inventario per verificare il possesso dello strumento richiesto. Se l’oggetto è disponibile, il giocatore può utilizzarlo per completare l’azione, spingendo il sistema a modificare l’ambiente circostante (ad esempio ripristinando l’energia o aprendo un passaggio sbarrato) e garantendo l’accesso a una nuova area.
+        </p>
+        <p>
+          Questo meccanismo tratta l’esplorazione e la raccolta dati come un puzzle dinamico. Gli oggetti trovati sulla mappa non sono meri collezionabili, ma chiavi fondamentali per interagire con i pianeti e superare gli ostacoli ambientali.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <h3>Diagramma caso d'uso per l'esplorazione</h3>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+graph LR
+    Player((Giocatore))
+
+    subgraph Sistema_New_Moon [New Moon: Esplorazione e Movimento]
+        UC1(Esplorazione Top-Down)
+        UC2(Viaggio Galattico)
+        UC3(Ricostruzione Memoria)
+        UC4(Risoluzione Enigmi Ambientali)
+        UC5(Gestione Sinergia Protagonisti)
+        UC6(Interazione Singola Z/X)
+
+        UC2 -.->|include| UC7(Scelta del Pianeta)
+        UC4 -.->|include| UC8(Ripristino Energia/Percorsi)
+        UC5 -.->|include| UC9(Alternanza Protagonisti)
+
+        UC6 --- UC5
+        UC6 --- UC4
+    end
+
+    Player --- UC1
+    Player --- UC2
+    Player --- UC3
+    Player --- UC4
+    Player --- UC5
+
+    style Player fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style Sistema_New_Moon fill:#f9f9ff,stroke:#666,stroke-width:1px,stroke-dasharray: 5 5
+    style UC6 fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma dei casi d'uso mappa tutte le macro-funzionalità legate al movimento e alla sinergia nel modulo "New Moon". Il giocatore si trova al centro di un ecosistema che prevede l'esplorazione top-down, la ricostruzione della memoria tramite i frammenti di lore e il viaggio galattico (il quale include la selezione del pianeta d'atterraggio). Il cuore strategico risiede nella gestione della sinergia dei due protagonisti e nella risoluzione degli enigmi, azioni entrambe strettamente legate al sistema di input a pulsante singolo (Z/X).
+        </p>
+        <p>
+          Questa struttura definisce l'identità del gameplay esplorativo: i due protagonisti non si muovono semplicemente nello spazio, ma devono collaborare attivamente combinando le loro abilità uniche per sbloccare i segreti del cosmo.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <h3>Diagramma caso d'uso per il sistema di inventario e utilizzo strumenti</h3>
+      </div>
+
+      <div class="diagram-frame">
+        <pre class="mermaid">
+graph LR
+    Player((Giocatore))
+
+    subgraph Sistema_Inventario [Modulo: Sistema di Inventario]
+        UC1(Raccogliere oggetti sulla mappa)
+        UC2(Gestire l'inventario)
+        UC3(Utilizzare gli strumenti)
+        UC4(Risolvere puzzle ambientali)
+
+        UC3 -.->|include| UC4
+    end
+
+    Player --- UC1
+    Player --- UC2
+    Player --- UC3
+        </pre>
+      </div>
+
+      <div class="diagram-explainer">
+        <p>
+          Questo diagramma dei casi d'uso illustra i confini del modulo di gestione degli oggetti. Il giocatore ha la facoltà di compiere tre azioni principali: raccogliere le risorse distribuite sulla mappa, organizzare il proprio inventario e utilizzare attivamente gli strumenti posseduti. Il diagramma evidenzia come l'azione di utilizzo degli strumenti sia inclusa direttamente nella risoluzione dei puzzle ambientali.
+        </p>
+        <p>
+          Questo flusso dimostra la forte coerenza sistemica del progetto, dove il loop di gioco unisce la curiosità dell'esplorazione top-down all'utilità pratica delle risorse trovate, trasformando la gestione dell'inventario in un'estensione diretta della progressione narrativa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
